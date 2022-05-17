@@ -11,12 +11,12 @@
    </head>
    <body>
       <h2>Taxi Trips</h2>
-      <div x-data="{ Philippi: 21, Nyanga: 20, Maitland:17, totalFare:0 , taxi:CA 123-865, totalF:0, show:false, trips:0 } 
+      <div x-data="{Philippi:21, passengers:0, Nyanga:20, Maitland:17, totalFare:0 ,  Alltotal:0, show:false, trips:0 }">
          <button class=" btn btn-outline-dark" @click="show=!show">Add Taxi</button>
          <button class="btn btn-outline-dark" @click="show=!show">Add Route</button>
-         <input type="text" x-show="show" x-model="payment" placeholder="Enter your destination">
-         <input type="text" x-show="show" x-model="taxi" placeholder="Enter taxi fare">
-         <button x-show="show"@click=" Philippi= 21, Nyanga=20, Maitland= 17, totalFare=0 , taxi:CA 123-865,CY 345-987,CL 267-987 , trips=0,totalF=0">Add</button>
+         <input type="text" x-show="show" x-model="totalFare" placeholder="Enter your destination">
+         <input type="text" x-show="show" x-model="trips" placeholder="Enter taxi fare">
+         <button x-show="show"@click=" Philippi= 21, Nyanga=20, Maitland= 17, totalFare=0 ,  trips=0,totalF=0">Add</button>
          <table class="table table-striped">
             <th>
             <td>Departure</td>
@@ -26,31 +26,47 @@
             <td>Taxi fare</td>
             <td>Total fare</td>
             <td>Available taxis</td>
-            </th>
+
+         </th>
             <tr>
-               <td><strong></strong></td>
-               <td><span x-text="taxi" x-show="Philippi" class="totalFare"></span></td>
-               <td><span x-text="trips" x-show="Philippi" class="totalFare"></span></td>
-               <td> <button @click="trips++,Philippi +=21,total +=21" x-show="Philippi">+</button>
-                  <button @click="trips--,Philippi -=21,totalFare +=21" x-show="Philippi">-</button>
-               </td>
+              <td>Cape Town</td>
+              <td>Phillipi</td>
+              <td><button @click="passengers+=1" >+</button>
+               <span x-text="passengers"></span>
+               <button @click="passengers-=1">-</button>
+            </td>
+              <td><button>Leave</button></td>
+              <td>21</td>
+              <td x-text="passengers*Philippi"></td>
+              <td x-text="passengers*Philippi">2</td>
+              <td>2</td>
             </tr>
             <tr>
-               <td><strong></strong></td>
-               <td><span x-text="taxi" x-show="Nyanga" class="totalFare"></span></td>
-               <td><span x-text="trips" x-show="Nyanga" class="totalFare"></span></td>
-               <td> <button @click="trips++,Philippi +=20,total +=20" x-show="Nyanga">+</button>
-                  <button @click="trips--,Philippi +=20,totalFare +=20" x-show="Nyanga">-</button>
-               </td>
-            </tr>
-            <tr>
-               <td><strong></strong></td>
-               <td><span x-text="taxi" x-show="Maitland" class="totalFare"></span></td>
-               <td><span x-text="trips" x-show="Maitland" class="totalFare"></span></td>
-               <td> <button @click="trips++,Maitland +=17,total +=17" x-show="Maitland">+</button>
-                  <button @click="trips--,Maitland +=17,totalFare +=17" x-show="Maitland">-</button>
-               </td>
-            </tr>
+               <td>Bellville</td>
+               <td>Nyanga</td>
+               <td><button @click="passengers+=1" >+</button>
+                <span x-text="passengers"></span>
+                <button @click="passengers-=1">-</button>
+             </td>
+               <td><button>Leave</button></td>
+               <td>18</td>
+               <td x-text="passengers*Nyanga"></td>
+               <td x-text="passengers*Nyanga">3</td>
+               <td>2</td>
+             </tr>
+             <tr>
+               <td>Cape Town</td>
+               <td>Maitland</td>
+               <td><button @click="passengers+=1" >+</button>
+                <span x-text="passengers"></span>
+                <button @click="passengers-=1">-</button>
+             </td>
+               <td><button>Leave</button></td>
+               <td>17</td>
+               <td x-text="passengers*Maitland"></td>
+               <td x-text="passengers*Maitland"></td>
+               <td>1</td>
+             </tr>
          </table>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

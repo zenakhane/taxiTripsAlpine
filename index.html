@@ -11,12 +11,18 @@
    </head>
    <body>
       <h2>Taxi Trips</h2>
-      <div x-data="{Philippi:21, passengers:0, Nyanga:20, Maitland:17, totalFare:0 ,  Alltotal:0, show:false, trips:0 }">
-         <button class=" btn btn-outline-dark" @click="show=!show">Add Taxi</button>
+      <div x-data="{Philippi:21, passengers:0,pass:0,pas:0, Nyanga:20, Maitland:17, totalFare:0 ,  Alltotal:0, show:false, trips:0,passengers:0,pass:0,pas:0 }">
+         <div class="addBtn">
+            <button class=" btn btn-outline-dark" @click="show=!show">Add Taxi</button>
          <button class="btn btn-outline-dark" @click="show=!show">Add Route</button>
          <input type="text" x-show="show" x-model="totalFare" placeholder="Enter your destination">
          <input type="text" x-show="show" x-model="trips" placeholder="Enter taxi fare">
-         <button x-show="show"@click=" Philippi= 21, Nyanga=20, Maitland= 17, totalFare=0 ,  trips=0,totalF=0">Add</button>
+         <button x-show="show" @click="Philippi:21, passengers:0,pass:0,pas:0, Nyanga:20, Maitland:17">Add</button>
+         </div>
+         
+        <div class="prices">
+         <span>Total price made a day: 0</span>
+        </div>
          <table class="table table-striped">
             <th>
             <td>Departure</td>
@@ -44,27 +50,27 @@
             <tr>
                <td>Bellville</td>
                <td>Nyanga</td>
-               <td><button @click="passengers+=1" >+</button>
-                <span x-text="passengers"></span>
-                <button @click="passengers-=1">-</button>
+               <td><button @click="pass+=1" >+</button>
+                <span x-text="pass"></span>
+                <button @click="pass-=1">-</button>
              </td>
                <td><button>Leave</button></td>
                <td>18</td>
-               <td x-text="passengers*Nyanga"></td>
-               <td x-text="passengers*Nyanga">3</td>
+               <td x-text="pass*Nyanga"></td>
+               <td x-text="pass*Nyanga">3</td>
                <td>2</td>
              </tr>
              <tr>
                <td>Cape Town</td>
                <td>Maitland</td>
-               <td><button @click="passengers+=1" >+</button>
-                <span x-text="passengers"></span>
-                <button @click="passengers-=1">-</button>
+               <td><button @click="pas+=1" >+</button>
+                <span x-text="pas"></span>
+                <button @click="pas-=1">-</button>
              </td>
                <td><button>Leave</button></td>
                <td>17</td>
-               <td x-text="passengers*Maitland"></td>
-               <td x-text="passengers*Maitland"></td>
+               <td x-text="pas*Maitland"></td>
+               <td x-text="pas*Maitland"></td>
                <td>1</td>
              </tr>
          </table>

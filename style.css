@@ -1,20 +1,12 @@
-/* .table {
-    width: 100%; 
-    margin: 0.55em;
-    text-align: center;
-  } */
-
-  /* td{
-    width: 100%; 
+.table {
+    width: 80%; 
     margin: 0.55em;
     text-align: center;
   }
-  tr{
-    width: 100%; 
-    margin: 0.55em;
-    text-align: center;
-  } */
-  .pageheader{
+h2{
+  text-align: center;
+}
+  .addBtn{
     text-align: right;
   }
   body{

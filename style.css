@@ -1,0 +1,22 @@
+.table {
+    width: 100%; 
+    margin: 0.55em;
+    text-align: center;
+  }
+
+  /* td{
+    width: 100%; 
+    margin: 0.55em;
+    text-align: center;
+  }
+  tr{
+    width: 100%; 
+    margin: 0.55em;
+    text-align: center;
+  } */
+  .pageheader{
+    text-align: right;
+  }
+  body{
+    background-color: rgb(192, 150, 231);
+  }
